@@ -12,6 +12,7 @@ import java.util.Scanner;
  *
  * @author Berkay
  */
+
 public class SıcaklıkDönüştürme {
     
     
