@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sıcaklık.dönüştürme;
+package sicaklikdonusturme;
 
 import java.io.*;
 import java.util.Scanner;
@@ -12,8 +12,7 @@ import java.util.Scanner;
  *
  * @author Berkay
  */
-
-public class SıcaklıkDönüştürme {
+class Sicaklikdonusturme {
     
     
     /**
@@ -90,9 +89,9 @@ public class SıcaklıkDönüştürme {
     }
     //***********************************************************
     
-    static double hesapla(double bazSıcaklık, double donma1, double kaynama1, double donma2, double kaynama2){
+    static double hesapla(double bazSicaklik, double donma1, double kaynama1, double donma2, double kaynama2){
         // hedefsıcaklık = (bazSıcaklık - donma1) * (kaynama2 - donma2) / (kaynama1 - donma1) + donma2
-        return (bazSıcaklık - donma1) * (kaynama2 - donma2) / (kaynama1 - donma1) + donma2;
+        return (bazSicaklik - donma1) * (kaynama2 - donma2) / (kaynama1 - donma1) + donma2;
     }
     
     public static void main(String[] args) {
@@ -108,13 +107,13 @@ public class SıcaklıkDönüştürme {
             String secim123 = new Scanner(System.in).nextLine();
             switch (secim123) {
                 case "1": //birim dönüştürme
-                    double bazSıcaklık, donma1, kaynama1, donma2, kaynama2;
+                    double bazSicaklik, donma1, kaynama1, donma2, kaynama2;
                     System.out.print("Kaynak birim: ");
                     String kaynakBirim = scan.nextLine();
                     double kaynak1[] = degerAl(kaynakBirim);
                     
                     System.out.print("Kaç derece " + kaynakBirim + " : ");
-                    bazSıcaklık = new Scanner(System.in).nextDouble();
+                    bazSicaklik = new Scanner(System.in).nextDouble();
                     
                     System.out.print("Hedef birim: ");
                     double kaynak2[] = degerAl(new Scanner(System.in).nextLine());
@@ -128,7 +127,7 @@ public class SıcaklıkDönüştürme {
                     kaynama1 = kaynak1[1];
                     donma2 = kaynak2[0];
                     kaynama2 = kaynak2[1];
-                    System.out.println("" + hesapla(bazSıcaklık, donma1, kaynama1, donma2, kaynama2));
+                    System.out.println("" + hesapla(bazSicaklik, donma1, kaynama1, donma2, kaynama2) + "\n" );
                     break;
                     
                 case "2": //yeni birim
@@ -142,11 +141,11 @@ public class SıcaklıkDönüştürme {
                     double kaynama = new Scanner(System.in).nextDouble();
                     
                     if (yeniDeger(birimAdi, donma, kaynama)){
-                        System.out.println("Birim başarıyla eklendi.");
+                        System.out.println("Birim başarıyla eklendi.\n");
                     }
                     
                     else{
-                        System.out.println("Birim oluşturma başarısız.");
+                        System.out.println("Birim oluşturma başarısız.\n");
                     }   
                     break;
                     
