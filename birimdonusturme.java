@@ -155,6 +155,7 @@ class Sicaklikdonusturme {
                 default:
                     break;
             }
+		System.gc();
         }
     }
     
